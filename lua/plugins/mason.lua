@@ -18,8 +18,8 @@ return {
 		require('mason').setup()
 
 		-- start LSP config
-		require('config.LSP.lspkind')
-		require('config.LSP.cmp')
-		require('config.LSP.mason')
+		require('plugins.LSP.lspkind')
+		require('plugins.LSP.cmp')
+		require('plugins.LSP.mason')
 	end
 }
