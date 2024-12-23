@@ -1,4 +1,5 @@
-local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
 -- Mason LSPConfig setup
 local mason_lspconfig = require('mason-lspconfig')
@@ -6,6 +7,7 @@ local mason_lspconfig = require('mason-lspconfig')
 
 local ensure_installed = { "lua_ls", "pyright", "ts_ls", "tailwindcss", "prismals" }
 local ensure_installed_language = { "lua", "python", "typescript", "javascript" }
+
 mason_lspconfig.setup({
 	ensure_installed = ensure_installed, -- Add more servers if needed
 	automatic_installation = true,
@@ -13,6 +15,8 @@ mason_lspconfig.setup({
 
 -- LSPConfig setup for all installed servers
 local lspconfig = require('lspconfig')
+
+vim.keymap.set("n", "<leader>fa", vim.lsp.buf.format, {})
 
 mason_lspconfig.setup_handlers({
 	-- Default handler (optional)
