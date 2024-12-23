@@ -8,6 +8,10 @@ keymap.set('n', 'ff', 'F')
 keymap.set('n', 'tm', '<CMD> Telescope colorscheme <CR>')
 keymap.set('n', '<leader>sa', '<CMD>wa <CR>')
 keymap.set('n', '<leader>e', '<CMD>Ex <CR>')
+keymap.set('n', 'mm', '<CMD>:put_<CR>p', opts)
+keymap.set('x', '<leader>p', '"_dP')
+keymap.set('n', 'E', '$')
+keymap.set('n', 'B', '_')
 
 -- Replace content
 keymap.set('n', 'R', ':%s/\\C')
@@ -17,4 +21,3 @@ keymap.set('n', '<Space>x', ':bd<CR>', opts)
 
 -- Format
 vim.keymap.set('n', '<C-s>', ':w<CR>')
-
