@@ -22,5 +22,10 @@ return {
 				max_width = 0.6
 			},
 		})
+
+		vim.keymap.set('n', '<leader>sd', '<CMD>Lspsaga show_line_diagnostics<CR>')
+		vim.keymap.set('n', 'K', '<CMD>Lspsaga peek_definition<CR>')
+		vim.keymap.set('n', '<leader>hd', '<CMD>Lspsaga hover_doc <CR>')
+		vim.keymap.set('n', 'ca', '<CMD>Lspsaga code_action <CR>')
 	end,
 }
