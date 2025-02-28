@@ -10,8 +10,11 @@ keymap.set('n', '<leader>sa', '<CMD>wa <CR>')
 keymap.set('n', '<leader>e', '<CMD>Ex <CR>')
 keymap.set('n', 'mm', '<CMD>:put_<CR>p', opts)
 keymap.set('x', '<leader>p', '"_dP')
-keymap.set('n', 'E', '$')
-keymap.set('n', 'B', '_')
+keymap.set('n', 'te', '$')
+keymap.set('n', 'ti', '_')
+
+-- Copy path of current buffer
+keymap.set('n', '<leader>cp', '<CMD>:let @+ = expand("%")<CR>')
 
 -- Replace content
 keymap.set('n', 'R', ':%s/\\C')

@@ -1,9 +1,9 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = false
 
 -- Mason LSPConfig setup
 local mason_lspconfig = require('mason-lspconfig')
-
 
 local ensure_installed = { "lua_ls", "pyright", "ts_ls", "tailwindcss", "prismals" }
 local ensure_installed_language = { "lua", "python", "typescript", "javascript" }

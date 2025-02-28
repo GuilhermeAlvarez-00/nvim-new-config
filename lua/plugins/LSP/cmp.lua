@@ -51,6 +51,7 @@ cmp.setup({
 	},
 	performance = {
 		debounce = 60, -- Adjust debounce time (in milliseconds)
+		max_view_entries = 7
 	},
 	formatting = {
 		format = lspkind.cmp_format({
