@@ -9,12 +9,9 @@ return {
           fm.setup {
             glow = false,
             theme = "fluoromachine",
-            transparent = false,
+            transparent = true,
             brightness = 0.01,
         }
     	end,
     },
-	config = function()
-		vim.cmd.colorscheme("rose-pine")
-	end
 }
