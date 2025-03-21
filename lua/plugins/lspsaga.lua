@@ -16,11 +16,6 @@ return {
 			symbol_in_winbar = {
 				enable = false,
 			},
-
-			diagnostic = {
-				max_height = 0.6,
-				max_width = 0.6
-			},
 		})
 
 		vim.keymap.set('n', '<leader>sd', '<CMD>Lspsaga show_line_diagnostics<CR>')

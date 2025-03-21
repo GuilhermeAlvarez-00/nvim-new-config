@@ -5,8 +5,8 @@ capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = false
 -- Mason LSPConfig setup
 local mason_lspconfig = require('mason-lspconfig')
 
-local ensure_installed = { "lua_ls", "pyright", "ts_ls", "tailwindcss", "prismals" }
-local ensure_installed_language = { "lua", "python", "typescript", "javascript" }
+local ensure_installed = { "lua_ls", "ts_ls", "tailwindcss", "prismals" }
+local ensure_installed_language = { "lua", "typescript", "javascript" }
 
 mason_lspconfig.setup({
 	ensure_installed = ensure_installed, -- Add more servers if needed
