@@ -23,4 +23,6 @@ keymap.set('n', 'R', ':%s/\\C')
 keymap.set('n', '<Space>x', ':bd<CR>', opts)
 
 -- Format
+vim.keymap.set("n", "<leader>fa", vim.lsp.buf.format, {})
+
 vim.keymap.set('n', '<C-s>', ':w<CR>')
