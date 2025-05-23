@@ -8,8 +8,6 @@ keymap.set('n', 'ff', 'F')
 keymap.set('n', 'tm', '<CMD> Telescope colorscheme <CR>')
 keymap.set('n', '<leader>sa', '<CMD>wa <CR>')
 keymap.set('n', '<leader>e', '<CMD>Ex <CR>')
-keymap.set('n', 'mm', '<CMD>:put_<CR>p', opts)
-keymap.set('x', '<leader>p', '"_dP')
 keymap.set({ 'n', 'v' }, 'te', '$')
 keymap.set({ 'n', 'v' }, 'ti', '_')
 
