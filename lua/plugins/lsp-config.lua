@@ -34,6 +34,8 @@ return {
 
 			local util = require("lspconfig.util");
 
+			lspconfig.tailwindcss.setup({})
+
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities
 			})
@@ -54,9 +56,6 @@ return {
 						local idx = 1
 						while idx <= #result.diagnostics do
 							local entry = result.diagnostics[idx]
-
-							local formatter = require('format-ts-errors')[entry.code]
-							entry.message = formatter and formatter(entry.message) or entry.message
 
 							-- codes: https://github.com/microsoft/TypeScript/blob/main/src/compiler/diagnosticMessages.json
 							if entry.code == 80001 then
@@ -120,6 +119,8 @@ return {
 					}
 				}
 			})
+
+			lspconfig.emmet_language_server.setup({})
 		end
 	}
 }
