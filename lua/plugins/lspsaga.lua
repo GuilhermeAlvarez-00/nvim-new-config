@@ -1,5 +1,6 @@
 return {
 	'nvimdev/lspsaga.nvim',
+	event = "LspAttach",
 	dependencies = {
 		'nvim-treesitter/nvim-treesitter', -- optional
 		'nvim-treesitter/playground',
@@ -15,6 +16,16 @@ return {
 			},
 			symbol_in_winbar = {
 				enable = false,
+			},
+			diagnostic = {
+				show_code_action = true,
+				show_layout = "float", -- float or normal window
+				max_width = 0.6,
+				max_height = 0.6,
+				keys = {
+					quit = "q",
+					exec = "<CR>",
+				},
 			},
 		})
 
